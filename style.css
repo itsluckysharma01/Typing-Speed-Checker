@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    animation: backgroundShift 10s ease infinite;
+}
+
+@keyframes backgroundShift {
+    0%, 100% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    50% { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+}
+.wrapper{
+    width: 750px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.wrapper:hover {
+    transform: translateY(-5px);
+}
+.wrapper .content-box{
+    padding: 13px 20px 0;
+    border-radius: 10px;
+    border: 1px solid #bfbfbf;
+
+}
+.wrapper .input-field{
+    padding: 30px 20px 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -99;
+}
+
+
+.content-box .content{
+    margin-top: 17px;
+    display: flex;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #bfbfbf;  
+
+}
+
+.content-box .result-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 140px);
+
+}
+.result-details li{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    align-items: center;
+
+}
+.content button{
+    width: 120px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    margin: 0 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.content button:hover{
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.content button:active{
+    transform: translateY(0px);
+}
+
+.pause-btn {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%) !important;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3) !important;
+}
+
+.pause-btn:hover {
+    background: linear-gradient(135deg, #f57c00 0%, #ff9800 100%) !important;
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4) !important;
+}
+
+.pause-btn.paused {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%) !important;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+}
+
+.pause-btn.paused:hover {
+    background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%) !important;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+}
+.typing-text p span{
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: all 0.15s ease;
+}
+.typing-text p span.active{
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 3px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+.typing-text p span.correct{
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 3px;
+}
+
+.typing-text p span.incorrect{
+    color: #fff;
+    background: #f44336;
+    border-radius: 3px;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+/* Message styles */
+.message {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-align: center;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message.info {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.message.success {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.message.warning {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ff9800;
+    border: 2px solid rgba(255, 193, 7, 0.3);
+}
+
+/* Stats enhancement */
+.result-details li {
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.result-details li:hover {
+    background: rgba(102, 126, 234, 0.05);
+    transform: scale(1.05);
+}
+
+.result-details li p {
+    font-weight: 600;
+    color: #555;
+}
+
+.result-details li span {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 1.1em;
+}
+
+/* Pulse animation for urgent time */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Enhanced typing area */
+.content-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.content-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Pause state styling */
+.wrapper.paused {
+    opacity: 0.7;
+}
+
+.wrapper.paused .typing-text {
+    pointer-events: none;
+    filter: blur(1px);
+}
+
+.wrapper.paused .typing-text::after {
+    content: '⏸️ PAUSED';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 152, 0, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 10;
+    animation: pausePulse 2s infinite;
+}
+
+@keyframes pausePulse {
+    0%, 100% { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .result-details {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .content button {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+::selection{
+    color: #fff;
+    background: rgba(102, 126, 234, 0.3);
+}
