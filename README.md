@@ -9,10 +9,10 @@
 
 **A modern, interactive typing speed test with real-time feedback, pause functionality, and beautiful animations!**
 
-[🚀 Live Demo](#) | [📖 Documentation](#features) | [🛠️ Installation](#installation)
+[🚀 Live Demo]( https://itsluckysharma01.github.io/Typing-Speed-Checker/) | [📖 Documentation](#features) | [🛠️ Installation](#installation)
 
 </div>
-
+Click in live demo to see project.
 ---
 
 ## 🎯 Features
