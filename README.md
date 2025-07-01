@@ -229,7 +229,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Created by **Lucky Sharma** with ❤️
 
 - 📧 Email: panditluckysharma42646@gmail.com
-- 🐙 GitHub: [@tsluckysharma01](https://github.com/itsluckysharma01)
+- 🐙 GitHub: [itsluckysharma01](https://github.com/itsluckysharma01)
 - 💼 LinkedIn: [Lucky Sharma](https://linkedin.com/in/lucky-sharma918894599977)
 
 ---
