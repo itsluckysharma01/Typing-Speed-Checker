@@ -125,16 +125,6 @@ cd typing-speed-test
 open index.html
 ```
 
-### 📁 File Structure
-
-```
-typing-speed-test/
-├── 📄 index.html          # Main HTML structure
-├── 🎨 style.css           # Styling and animations
-├── ⚡ script.js           # Core functionality
-└── 📖 README.md           # This file
-```
-
 ---
 
 ## 🔧 Technical Features
@@ -179,75 +169,7 @@ typing-speed-test/
   - 👍 40+ WPM: "Good typing speed!"
   - 💪 <40 WPM: "Keep practicing to improve!"
 
-### 🔄 Test Management
 
-- **Automatic paragraph selection** from curated collection
-- **Clean state reset** between tests
-- **Pause state preservation** of all statistics
-- **Input validation** and error prevention
-
-### 📱 Accessibility
-
-- **Keyboard navigation** support
-- **Focus management** for better UX
-- **Visual feedback** for all interactions
-- **Clear state indicators**
-
----
-
-## 🎨 Customization
-
-### 🌈 Color Themes
-
-The project uses CSS custom properties for easy theming:
-
-```css
-:root {
-  --primary-color: #667eea;
-  --secondary-color: #764ba2;
-  --success-color: #4caf50;
-  --error-color: #f44336;
-  --warning-color: #ff9800;
-}
-```
-
-### 📝 Adding New Paragraphs
-
-Add new typing challenges in `script.js`:
-
-```javascript
-const paragraph = [
-  "Your new paragraph here...",
-  "Another challenging sentence...",
-  // Add more paragraphs
-];
-```
-
-### ⏱️ Adjusting Timer
-
-Change the test duration:
-
-```javascript
-let maxTime = 60; // Change to desired seconds
-```
-
----
-
-## 🛠️ Browser Support
-
-| Browser    | Version | Status             |
-| ---------- | ------- | ------------------ |
-| 🌐 Chrome  | 60+     | ✅ Fully Supported |
-| 🦊 Firefox | 55+     | ✅ Fully Supported |
-| 🧭 Safari  | 12+     | ✅ Fully Supported |
-| 📘 Edge    | 79+     | ✅ Fully Supported |
-
-### 🎵 Audio Support
-
-- Web Audio API required for sound feedback
-- Graceful degradation if audio is unavailable
-
----
 
 ## 📊 Performance Metrics
 
@@ -306,10 +228,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Created by **Lucky Sharma** with ❤️
 
-- 📧 Email: your.email@example.com
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-- 🐦 Twitter: [@yourtwitter](https://twitter.com/yourtwitter)
-- 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- 📧 Email: panditluckysharma42646@gmail.com
+- 🐙 GitHub: [@yourusername](https://github.com/itsluckysharma01)
+- 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/lucky-sharma918894599977)
 
 ---
 
