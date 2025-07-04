@@ -13,6 +13,7 @@
 
 </div>
 Click in live demo to see project.
+👉https://itsluckysharma01.github.io/Typing-Speed-Checker/
 ---
 
 ## 🎯 Features
